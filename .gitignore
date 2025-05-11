@@ -1,0 +1,3 @@
+# Ignore backend environment and node modules
+mini-crm-backend/.env
+mini-crm-backend/node_modules/
