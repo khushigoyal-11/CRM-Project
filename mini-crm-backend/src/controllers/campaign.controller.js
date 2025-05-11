@@ -1,5 +1,5 @@
 import Campaign from '../models/Campaign.js';
-import Customer from '../models/Customer.js';
+import Customer from '../models/Customer.model.js';
 import DeliveryLog from '../models/DeliveryLog.js';
 import VendorService from '../services/vendor.service.js';
 

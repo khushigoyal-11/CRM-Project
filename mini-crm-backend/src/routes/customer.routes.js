@@ -6,7 +6,18 @@ import { protect } from '../middlewares/auth.middleware.js';
 
 const router = express.Router();
 
-router.post('/', protect, [body('email').isEmail(), body('name').notEmpty()], validate, addCustomer);
+router.post(
+  '/',
+  protect,
+  [
+    body('email').isEmail(),
+    body('name').notEmpty(),
+    body('phone').notEmpty(),
+  ],
+  validate,
+  addCustomer
+);
+
 router.get('/', protect, getCustomers);
 
 export default router;
