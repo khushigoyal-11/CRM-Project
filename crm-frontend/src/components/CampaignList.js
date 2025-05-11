@@ -1,0 +1,1 @@
+// CampaignList.js placeholder
