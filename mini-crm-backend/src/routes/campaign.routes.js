@@ -1,8 +1,12 @@
-import express from 'express';
-import { createCampaign, listCampaigns } from '../controllers/campaign.controller.js';
-import { protect } from '../middlewares/auth.middleware.js';
+import { Router } from 'express';
+import * as ctrl from '../controllers/campaign.controller.js';
+import auth from '../middlewares/auth.middleware.js';
 
-const router = express.Router();
-router.post('/', protect, createCampaign);
-router.get('/', protect, listCampaigns);
+const router = Router();
+router.use(auth);
+router.post('/',       ctrl.create);
+router.post('/preview', ctrl.preview);
+router.get('/',         ctrl.list);
+router.post('/callback',ctrl.callback);
+
 export default router;

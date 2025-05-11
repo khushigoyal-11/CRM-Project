@@ -4,10 +4,8 @@ import { FaChartPie, FaUser, FaClipboardList, FaFileInvoice, FaCogs } from 'reac
 
 const menu = [
   { to: '/', label: 'Dashboard', icon: FaChartPie },
-  { to: '/leads', label: 'Lead', icon: FaUser },
-  { to: '/offers', label: 'Offer', icon: FaClipboardList },
-  { to: '/customers', label: 'Customer', icon: FaUser },
-  { to: '/invoices', label: 'Invoice', icon: FaFileInvoice },
+  { to: '/campaigns/new', label: 'New Campaign', icon: FaClipboardList },
+  { to: '/campaigns', label: 'Campaigns', icon: FaFileInvoice },
   { to: '/settings', label: 'Settings', icon: FaCogs }
 ];
 
@@ -18,7 +16,7 @@ export default function Sidebar() {
       <nav className="mt-10">
         {menu.map(({ to, label, icon: Icon }) => (
           <NavLink
-            key={label}
+            key={to}
             to={to}
             className={({ isActive }) =>
               `flex items-center p-4 hover:bg-gray-100 text-gray-700 ${

@@ -1,1 +1,0 @@
-// CampaignForm.js placeholder
